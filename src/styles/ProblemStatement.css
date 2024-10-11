@@ -1,0 +1,70 @@
+@keyframes fly-up {
+    0% {
+      transform: translateY(20px); /* Start slightly below */
+      opacity: 0; /* Start invisible */
+    }
+    100% {
+      transform: translateY(0); /* End in original position */
+      opacity: 1; /* Fade in to visible */
+    }
+  }
+  
+  .problem-statement-container {
+    background: linear-gradient(to right, rgba(7, 231, 212, 0.8), rgba(2, 221, 225, 0.5)); /* Background image with gradient overlay */
+    background-size: cover; /* Cover the entire container */
+    padding: 80px 40px; /* Generous padding for a spacious feel */
+    border-radius: 20px; /* More pronounced rounded corners */
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2); /* Deeper shadow for a floating effect */
+    max-width: 900px; /* Max width for better readability */
+    margin: 60px auto; /* Centering the component */
+    position: relative; /* For inner positioning */
+    overflow: hidden; /* Prevent overflow */
+    font-family: 'Poppins', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .problem-statement-container.fly-up {
+    animation: fly-up 0.6s ease-out forwards; /* Trigger the fly-up animation when visible */
+  }
+  
+  .problem-statement-content {
+    text-align: center; /* Center text alignment */
+    position: relative; /* For inner positioning */
+    z-index: 1; /* Ensure content is above background */
+  }
+  
+  .problem-title {
+    font-size: 3.5rem; /* Larger font size for title */
+    color: #1f3737; /* Dark color for contrast */
+    margin-bottom: 25px; /* Space below the title */
+    font-weight:bolder; /* Bold title for emphasis */
+    letter-spacing: 2px; /* Increased spacing for a modern look */
+    text-transform: uppercase; /* Uppercase letters for title */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); /* Soft shadow for the title */
+  }
+  
+  .problem-description {
+    font-size: 1.6rem; /* Slightly larger font size for description */
+    color: #051020; /* Slightly lighter color */
+    line-height: 1.8; /* Improved line height for readability */
+    margin-bottom: 50px; /* Space below description */
+    padding: 0 25px; /* Side padding for smaller screens */
+  }
+  
+  .decorative-line {
+    width: 80px; /* Width of the decorative line */
+    height: 5px; /* Height of the decorative line */
+    background-color: #f43f5e; /* Accent color for the line */
+    margin: 20px auto; /* Centering the line */
+    border-radius: 3px; /* Rounded corners for the line */
+  }
+  
+  @media (max-width: 768px) {
+    .problem-title {
+      font-size: 2.5rem; /* Adjust title size for smaller screens */
+    }
+    .problem-description {
+      font-size: 1.4rem; /* Adjust description size for smaller screens */
+    }
+  }
+  

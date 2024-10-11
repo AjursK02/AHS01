@@ -1,0 +1,89 @@
+/* EmailSubscription.css */
+
+.subscription-container {
+    height: 200px; /* Fixed height */
+    margin-top: 15rem;
+    background-color: #AFEEEE; /* Light cyan background */
+    padding: 2rem;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center; /* Center text */
+    animation: fadeIn 0.5s ease-in; /* Fade-in animation */
+}
+
+.subscription-title {
+    font-size: 1.75rem; /* Slightly larger title */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333; /* Darker text color */
+}
+
+.subscription-description {
+    margin-bottom: 1rem;
+    color: #666; /* Medium gray */
+}
+
+.error-message {
+    color: #e63946; /* Red color for errors */
+    margin-bottom: 0.5rem;
+}
+
+.success-message {
+    color: #2a9d8f; /* Green color for success */
+    margin-bottom: 0.5rem;
+}
+
+.subscription-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Full width for form */
+}
+
+.input-container {
+    display: flex;
+    width: 100%; /* Full width for input */
+}
+
+.email-input {
+    flex-grow: 1;
+    padding: 0.75rem; /* Adjusted padding */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px 0 0 4px; /* Rounded left corners */
+    font-size: 1rem;
+    transition: border 0.3s; /* Smooth border transition */
+}
+
+.email-input:focus {
+    border-color: #264653; /* Dark teal border on focus */
+    outline: none; /* Remove default outline */
+}
+
+.subscribe-button {
+    background-color: #264653; /* Dark teal */
+    color: white;
+    padding: 0.75rem 1rem; /* Adjusted padding */
+    border: none; /* Remove border */
+    border-radius: 0 4px 4px 0; /* Rounded right corners */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+}
+
+.subscribe-button:hover {
+    background-color: #2a9d8f; /* Lighter teal on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Slide in from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Original position */
+    }
+}

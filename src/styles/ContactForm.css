@@ -1,0 +1,220 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Container styling */
+.contact-form-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  font-family: 'Poppins', sans-serif; /* Updated font family */
+  background: transparent; /* Gradient background */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  background-image: url('../assets/back1.jpg'); /* Correct relative path */
+  background-size: cover;
+  background-position: center; /* Transition for hover effect */
+}
+
+/* Form left styling */
+.form-left {
+  width: 60%;
+  padding-right: 50px;
+  text-align: center;
+  transition: color 0.3s ease;
+}
+
+.form-left h1 {
+  font-size: 3.5em; /* Increased size */
+  color: #918e8e;
+  margin: 0 0 20px;
+  font-weight: 600; /* Adjust weight for prominence */
+  transition: color 0.3s ease;
+}
+
+.form-left h2 {
+  font-size: 2.5em; /* Increased size */
+  color: #717171;
+  margin: 0 0 40px;
+  font-weight: 700; /* Adjust weight */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: color 0.3s ease;
+}
+
+.form-left h2 span {
+  color: #00BFFF; /* Light sky blue */
+  background: linear-gradient(90deg, #3BFFAD, #AA3FFF); /* Gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.form-left form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Updated input styling */
+.form-left input[type="text"],
+.form-left input[type="password"],
+.form-left input[type="email"], /* Include email input */
+.form-left textarea,
+.phone-input input {
+  padding: 15px 0;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 1.1em; /* Slightly larger font */
+  font-weight: 500;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+.form-left input[type="text"]:focus,
+.form-left input[type="password"]:focus,
+.form-left input[type="email"]:focus,
+.form-left textarea:focus,
+.phone-input input:focus {
+  border-bottom-color: #0a74da;
+  box-shadow: 0 1px 5px rgba(10, 116, 218, 0.7);
+}
+
+/* Glowing effect for placeholder values */
+.form-left input::placeholder,
+.form-left textarea::placeholder,
+.phone-input input::placeholder {
+  color: #ffffff;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.form-left input:focus::placeholder,
+.form-left textarea:focus::placeholder,
+.phone-input input:focus::placeholder {
+  opacity: 0.4;
+}
+
+/* Phone input styling */
+.phone-input {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 1.1em; /* Slightly larger font */
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.phone-input select {
+  padding: 15px 0;
+  margin-right: 10px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: transparent;
+  font-size: 1.1em; /* Slightly larger font */
+  color: #ffffff;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  appearance: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+.phone-input select:focus {
+  border-bottom-color: #0a74da;
+  box-shadow: 0 1px 5px rgba(10, 116, 218, 0.7);
+}
+
+/* Submit button styling */
+.form-left button {
+  padding: 15px;
+  margin: 20px 0;
+  border: none;
+  background-color: #0af2f2;
+  font-weight: bold; /* Bright button color */
+  color: #022b2c;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em; /* Slightly larger font */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform effect */
+  font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+.form-left button:hover {
+  background-color: #007bb5; /* Darker shade on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+/* Form right styling */
+.form-right {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-right ul {
+  list-style-type: none;
+  padding: 7.5rem;
+  margin: 0;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.form-right li {
+  margin: 20px 0;
+  text-align: center;
+  color: #666;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Added hover effect */
+}
+
+.form-right li:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.form-right a {
+  text-decoration: none;
+  color: #eeecec;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease-in-out, transform 0.3s ease; /* Added transform effect */
+  font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+.form-right a:hover {
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.form-right a span {
+  color: #666;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.form-right a .arrow {
+  font-size: 1.5em;
+  color: #000;
+  margin-left: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.form-right a:hover .arrow {
+  transform: translateX(5px);
+}

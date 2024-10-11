@@ -1,0 +1,86 @@
+/* Container Styles */
+.demo-project-container {
+  background: rgba(255, 255, 255, 0.15); /* Transparent background for glass effect */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  padding: 60px 30px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Title Styles */
+.demo-title {
+  font-size: 2.6rem;
+  color: #f0f0f0; /* Light gray for modern, soft look */
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-transform: none;
+  letter-spacing: 0.8px;
+  position: relative;
+  z-index: 2;
+  opacity: 0.9; /* Slightly reduced opacity for a softer feel */
+}
+
+/* Description Styles */
+.demo-description {
+  font-size: 1.3rem;
+  color: #dcdcdc; /* Lighter color for readability and modern style */
+  line-height: 1.7;
+  margin-bottom: 35px;
+  position: relative;
+  z-index: 2;
+  opacity: 0.85; /* Keep consistent opacity for better layering */
+}
+
+/* Link Button Styles */
+.demo-link {
+  font-size: 1.3rem;
+  color: #fff;
+  background: linear-gradient(135deg, #007bff, #00c6ff); /* Trendy gradient button */
+  padding: 12px 35px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.demo-link:hover {
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6); /* Glow effect */
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Hover Effect on Container */
+.demo-project-container:hover {
+  transform: scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Decorative Background */
+.demo-project-container::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 123, 255, 0.2), transparent);
+  z-index: 1;
+}
+
+.demo-project-container::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+  z-index: 1;
+}

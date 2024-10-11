@@ -1,0 +1,167 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../assets/back.jpg'); /* Correct relative path */
+  background-size: cover;
+  background-position: center;
+  color: #C9D1D9; /* Light text for readability */
+}
+
+/* Main Container */
+.project-l01-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px;
+  background: transparent;
+  border-radius: 15px;
+  box-shadow: none; /* Remove harsh box shadows */
+  transition: transform 0.3s ease-in-out, background-color 0.5s;
+  margin-top: 130px;
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly down */
+  animation: fadeInUp 0.5s forwards; /* Animation on load */
+}
+
+/* Fade-in Up Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 50px;
+  padding: 40px;
+  background-color: transparent; /* Very transparent background */
+  border-radius: 20px;
+  box-shadow: none; /* Remove box-like shadows */
+  transition: transform 0.3s ease-in-out, background-color 0.5s ease;
+}
+
+/* Intro Section with dark gradient */
+.intro-section {
+  background: linear-gradient(135deg, #1F6FEB, #161B22); /* Darker gradient */
+  border-left: 5px solid #1F6FEB; /* Vertical accent line */
+  transition: background-color 0.3s ease;
+}
+
+/* Highlighted Text */
+.highlighted-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #050008; /* Lighter blue */
+  text-align: center;
+  line-height: 1.8;
+  animation: slideIn 0.6s forwards; /* Animation on load */
+}
+
+/* Slide-in Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Heading Styles */
+.section-heading {
+  font-size: 2.5rem;
+  color: #C9D1D9; /* Lighter text for headings */
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px solid #58A6FF; /* Underline with light blue accent */
+  padding-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.section-heading:hover {
+  color: #58A6FF; /* Change color on hover */
+}
+
+/* Tabs Styles */
+.tabs {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+/* Tab Styles */
+.tab {
+  flex: 1;
+  padding: 30px;
+  background-color: transparent; /* Dark background */
+  border-radius: 15px;
+  box-shadow: none; /* No box shadow */
+  transition: transform 0.3s ease-in-out, background-color 0.5s ease;
+  position: relative;
+  transform: scale(1); /* Initial scale */
+}
+
+.tab:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.tab h4 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #58A6FF; /* Light blue for headings */
+}
+
+/* Decorative element in tabs */
+.tab::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  width: 50px;
+  height: 5px;
+  background: #58A6FF; /* Accent color */
+  border-radius: 3px;
+}
+
+/* Paragraph Text Styles */
+p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: #C9D1D9; /* Light text */
+}
+
+/* Value Section Styles */
+.value-add-section {
+  background-color: transparent; /* Dark background */
+}
+
+/* Value List Styles */
+.value-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Try Button Styles */
+.try-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.try-button {
+  text-decoration: none;
+  background: linear-gradient(to right, #58A6FF, #1F6FEB); /* Gradient for premium feel */
+  color: #FFFFFF;
+  padding: 15px 50px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.4rem;
+  box-shadow: none; /* Remove harsh shadow */
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.try-button:hover {
+  transform: translateY(-5px); /* Move button up on hover */
+}

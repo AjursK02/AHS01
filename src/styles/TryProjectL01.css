@@ -1,0 +1,171 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+
+/* Left Sidebar */
+.left {
+    background-color: #c5b9cd;
+    width: 16.66%; /* 2/12 */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.left button {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: opacity 0.2s;
+}
+
+.left button:hover {
+    opacity: 0.7;
+}
+
+.chats-scroll-container {
+    max-height: 630px;
+    overflow-y: auto;
+}
+
+.chats-container {
+    padding: 10px;
+}
+
+.chat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #FFF8DC;
+    color: #31114b;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.chat:hover {
+    background-color: #fdd8a0;
+}
+
+/* Main Content */
+.right1 {
+    width: 83.33%; /* 10/12 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-4xl {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.itemsrow {
+    width: 43vw;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.examples {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.examples svg {
+    width: 30px;
+    height: 30px;
+}
+
+.examples button {
+    background-color: #FFF8DC;
+    color: #31114b;
+    width: 13vw;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+.examples button:hover {
+    background-color: #fdd8a0;
+}
+
+/* Input Section */
+.input {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input input {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFF8DC;
+    color: #31114b;
+    border-radius: 5px;
+    border: none;
+}
+
+.input input::placeholder {
+    color: #31114b;
+}
+
+.input button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    left: -40px;
+}
+
+.input button svg {
+    width: 25px;
+    height: 25px;
+    stroke: #31114b;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .itemsrow {
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .examples button {
+        width: 80vw;
+    }
+
+    .input {
+        width: 90vw;
+    }
+
+    .input input {
+        width: 100%;
+    }
+
+    .left {
+        width: 100%; /* Sidebar takes full width on small screens */
+    }
+
+    .right1 {
+        width: 100%; /* Main content takes full width on small screens */
+    }
+}
