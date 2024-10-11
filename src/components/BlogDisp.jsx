@@ -4,50 +4,50 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 import * as THREE from 'three';
 import '../styles/BlogDisp.css';
 
-const Pushman = ({ onPushComplete, isPushing }) => {
-  const { scene, animations } = useGLTF('/pushman/untitled.glb');
-  const [mixer] = useState(() => new THREE.AnimationMixer(scene));
+// const Pushman = ({ onPushComplete, isPushing }) => {
+//   const { scene, animations } = useGLTF('/pushman/untitled.glb');
+//   const [mixer] = useState(() => new THREE.AnimationMixer(scene));
 
-  useEffect(() => {
-    if (animations && animations.length) {
-      const action = mixer.clipAction(animations[0]); // Assuming the first animation is the push animation
-      action.setLoop(THREE.LoopOnce); // Make the animation play only once
-      action.clampWhenFinished = true; // Clamp to the last frame after finishing
+//   useEffect(() => {
+//     if (animations && animations.length) {
+//       const action = mixer.clipAction(animations[0]); // Assuming the first animation is the push animation
+//       action.setLoop(THREE.LoopOnce); // Make the animation play only once
+//       action.clampWhenFinished = true; // Clamp to the last frame after finishing
 
-      if (isPushing) {
-        action.reset().play(); // Play the animation if isPushing is true
-      }
+//       if (isPushing) {
+//         action.reset().play(); // Play the animation if isPushing is true
+//       }
 
-      mixer.addEventListener('finished', onPushComplete); // Trigger callback when push is complete
+//       mixer.addEventListener('finished', onPushComplete); // Trigger callback when push is complete
 
-      return () => {
-        mixer.removeEventListener('finished', onPushComplete); // Cleanup the event listener
-      };
-    }
-  }, [animations, mixer, onPushComplete, isPushing]);
+//       return () => {
+//         mixer.removeEventListener('finished', onPushComplete); // Cleanup the event listener
+//       };
+//     }
+//   }, [animations, mixer, onPushComplete, isPushing]);
 
-  useFrame((state, delta) => {
-    mixer.update(delta);
-  });
+//   useFrame((state, delta) => {
+//     mixer.update(delta);
+//   });
 
-  return <primitive object={scene} scale={0.8} position={[-0.25, -2, -1.5]} rotation={[0, -Math.PI / 4, 0]} />;
-};
+//   return <primitive object={scene} scale={0.8} position={[-0.25, -2, -1.5]} rotation={[0, -Math.PI / 4, 0]} />;
+// };
 
-const Canvas = ({ onPushComplete, isPushing }) => {
-  return (
-    <ThreeCanvas
-      camera={{ position: [2, 2, 5], fov: 25 }}
-      gl={{ alpha: true }}
-    >
-      <Suspense fallback={null}>
-        <ambientLight intensity={0.5} />
-        <directionalLight position={[5, 5, 5]} intensity={1} />
-        <Pushman onPushComplete={onPushComplete} isPushing={isPushing} />
-        <OrbitControls enableZoom={false} />
-      </Suspense>
-    </ThreeCanvas>
-  );
-};
+// const Canvas = ({ onPushComplete, isPushing }) => {
+//   return (
+//     <ThreeCanvas
+//       camera={{ position: [2, 2, 5], fov: 25 }}
+//       gl={{ alpha: true }}
+//     >
+//       <Suspense fallback={null}>
+//         <ambientLight intensity={0.5} />
+//         <directionalLight position={[5, 5, 5]} intensity={1} />
+//         <Pushman onPushComplete={onPushComplete} isPushing={isPushing} />
+//         <OrbitControls enableZoom={false} />
+//       </Suspense>
+//     </ThreeCanvas>
+//   );
+// };
 
 const BlogDisp = () => {
   const [blogs, setBlogs] = useState([]);
@@ -128,9 +128,9 @@ const BlogDisp = () => {
           </div>
         )}
       </div>
-      <div className="canvas-container">
+      {/* <div className="canvas-container">
         <Canvas onPushComplete={handlePushComplete} isPushing={isPushing} />
-      </div>
+      </div> */}
     </div>
   );
 };
