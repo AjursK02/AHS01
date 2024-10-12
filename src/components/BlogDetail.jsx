@@ -28,12 +28,12 @@ const BlogDetail = () => {
         <div className="blog-content" dangerouslySetInnerHTML={{ __html: post.content }}></div>
       </div>
 
-      {/* Grid for related blog posts */}
+
       <h2 className="related-posts-title">Related Posts</h2>
       <div className="blog-grid">
         {blogPosts.filter(relatedPost => relatedPost.id !== post.id).map((relatedPost) => (
           <div className="blog-post" key={relatedPost.id}>
-            <Link to={`/ai-blog/${relatedPost.id}`}> {/* Link to the related post */}
+            <Link to={`/ai-blog/${relatedPost.id}`}>
               <img src={relatedPost.image} alt={relatedPost.title} />
               <h3>{relatedPost.title}</h3>
               <p className="date">{relatedPost.date}</p>

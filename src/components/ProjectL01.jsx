@@ -1,19 +1,18 @@
 import React from 'react';
-import '../styles/ProjectL01.css'; // Ensure you have a CSS file for custom styles
+import '../styles/ProjectL01.css'; 
 import { Link } from 'react-router-dom';
 
 
-// Function to observe elements and add 'in-view' class when in viewport
 const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('in-view');
-      observer.unobserve(entry.target); // Stop observing once it's in view
+      observer.unobserve(entry.target); 
     }
   });
-}, { threshold: 0.1 }); // Trigger when 10% of the element is visible
+}, { threshold: 0.1 }); 
 
-// Selecting all sections and applying observer
+
 document.querySelectorAll('.section, .project-l01-container, .intro-section').forEach(section => {
   observer.observe(section);
 });

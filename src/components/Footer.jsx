@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { collection, addDoc } from 'firebase/firestore'; // Import Firestore methods
-import { db } from '../firebaseConfig'; // Import Firestore instance
+import { db } from '../firebaseConfig'; 
 import '../styles/Footer.css';
 import img from '../assets/ajursLogo.png'
 
@@ -73,7 +73,8 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom-line">
-        <p>©2024 Ajurs Insights & Company ® All rights reserved. <a href="#">Privacy Policy</a></p>
+        <p>©2024 Ajurs Insights & Company ® All rights reserved. Privacy Policy</p>
+        {/* <a href="#">Privacy Policy</a> */}
       </div>
     </div>
   );

@@ -52,9 +52,9 @@ const SignIn = ({ onClose }) => {
   };
 
   const handleLinkedInSignIn = () => {
-    const clientId = 'YOUR_CLIENT_ID';
-    const redirectUri = 'YOUR_REDIRECT_URI';
-    const state = 'YOUR_RANDOM_STATE';
+    // const clientId = 'YOUR_CLIENT_ID';
+    // const redirectUri = 'YOUR_REDIRECT_URI';
+    // const state = 'YOUR_RANDOM_STATE';
     window.location.href = `https://www.linkedin.com/oauth/v2/authorization?...`;
   };
 

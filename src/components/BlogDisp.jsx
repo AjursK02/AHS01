@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, Suspense } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 // import { Canvas as ThreeCanvas, useFrame } from '@react-three/fiber';
 // import { OrbitControls, useGLTF } from '@react-three/drei';
 // import * as THREE from 'three';
@@ -51,7 +51,7 @@ import '../styles/BlogDisp.css';
 
 const BlogDisp = () => {
   const [blogs, setBlogs] = useState([]);
-  const [currentBlogIndex, setCurrentBlogIndex] = useState(0);
+  const [currentBlogIndex] = useState(0);
   const [isPushing, setIsPushing] = useState(false);
   const blogRef = useRef();
 
@@ -97,20 +97,20 @@ const BlogDisp = () => {
   //   setIsPushing(false); // Reset the push state
   //   setCurrentBlogIndex((prevIndex) => (prevIndex + 1) % blogs.length); // Move to the next blog
 
-    // Trigger blog sliding effect
-    if (blogRef.current) {
-      blogRef.current.style.transition = 'transform 1s ease-in-out';
-      blogRef.current.style.transform = 'translateX(-100%)';
-      setTimeout(() => {
-        blogRef.current.style.transition = 'none';
-        blogRef.current.style.transform = 'translateX(100%)';
-        setTimeout(() => {
-          blogRef.current.style.transition = 'transform 1s ease-in-out';
-          blogRef.current.style.transform = 'translateX(0)';
-        }, 100);
-      }, 1000);
-    }
-  };
+  //   // Trigger blog sliding effect
+  //   if (blogRef.current) {
+  //     blogRef.current.style.transition = 'transform 1s ease-in-out';
+  //     blogRef.current.style.transform = 'translateX(-100%)';
+  //     setTimeout(() => {
+  //       blogRef.current.style.transition = 'none';
+  //       blogRef.current.style.transform = 'translateX(100%)';
+  //       setTimeout(() => {
+  //         blogRef.current.style.transition = 'transform 1s ease-in-out';
+  //         blogRef.current.style.transform = 'translateX(0)';
+  //       }, 100);
+  //     }, 1000);
+  //   }
+  // };
 
   return (
     <div className="container">

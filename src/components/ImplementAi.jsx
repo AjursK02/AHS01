@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Bar, BarChart, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
-import { Brain, TrendingUp, Users, FileText, MessageSquare } from 'lucide-react';
+import { TrendingUp, Users, FileText, MessageSquare } from 'lucide-react';
 
 const ImplementAi = () => {
   const [selectedArea, setSelectedArea] = useState(null);

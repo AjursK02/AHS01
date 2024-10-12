@@ -85,7 +85,7 @@ const Navbar = () => {
           <li><Link to="/ai-blog" className="ai-blog-button">AI Blog</Link></li>
           <div className={`dropdown ${activeDropdown ? "active" : ""}`} data-dropdown>
             <button className="link" data-dropdown-button onClick={() => toggleDropdown("about")}>About</button>
-            <div className="dropdown-menu information-grid">
+            {/* <div className="dropdown-menu information-grid">
               <div className='dropdown-column'>
                 <div className="dropdown-heading">Who Are We</div>
                 <div className="dropdown-links">
@@ -96,17 +96,17 @@ const Navbar = () => {
                 <div className="dropdown-links">
                   <a href="#" className="link">Projects</a>
                   <a href="#" className="link">Case Studies</a>
-                </div>
-              </div>
-            </div>
+                </div> */}
+              {/* </div>
+            </div> */}
           </div>
         </ul>
       </nav>
       <div className="navbar__actions">
         <div className="navbar__actions-row">
-          <a href="#" onClick={toggleSignIn}>Sign In</a>
+          <button href="#" onClick={toggleSignIn}>Sign In</button>
           <h3>|</h3>
-          <a href="#subscribe" className="subscribe">Subscribe</a>
+          <button href="#subscribe" className="subscribe">Subscribe</button>
         </div>
         <div className="navbar__search-container">
           <a href="#search" className="search-icon" onClick={toggleSearch}>
