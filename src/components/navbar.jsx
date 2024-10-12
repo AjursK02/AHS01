@@ -20,9 +20,9 @@ const Navbar = () => {
     setOpenDropdown(openDropdown === id ? null : id);
   };
 
-  const closeAllDropdowns = () => {
-    setOpenDropdown(null);
-  };
+  // const closeAllDropdowns = () => {
+  //   setOpenDropdown(null);
+  // };
 
   const toggleSearch = () => {
     setSearchOpen(!searchOpen);
