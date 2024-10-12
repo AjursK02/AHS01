@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef, Suspense } from 'react';
-import { Canvas as ThreeCanvas, useFrame } from '@react-three/fiber';
-import { OrbitControls, useGLTF } from '@react-three/drei';
-import * as THREE from 'three';
+// import { Canvas as ThreeCanvas, useFrame } from '@react-three/fiber';
+// import { OrbitControls, useGLTF } from '@react-three/drei';
+// import * as THREE from 'three';
 import '../styles/BlogDisp.css';
 
 // const Pushman = ({ onPushComplete, isPushing }) => {
@@ -93,9 +93,9 @@ const BlogDisp = () => {
     }
   }, [currentBlogIndex, blogs, isPushing]);
 
-  const handlePushComplete = () => {
-    setIsPushing(false); // Reset the push state
-    setCurrentBlogIndex((prevIndex) => (prevIndex + 1) % blogs.length); // Move to the next blog
+  // const handlePushComplete = () => {
+  //   setIsPushing(false); // Reset the push state
+  //   setCurrentBlogIndex((prevIndex) => (prevIndex + 1) % blogs.length); // Move to the next blog
 
     // Trigger blog sliding effect
     if (blogRef.current) {
