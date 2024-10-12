@@ -12,9 +12,9 @@ const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null); // Declare activeDropdown
   const [isScrolled, setIsScrolled] = useState(false); // Track scroll status
 
-  const handleDropdownToggle = (dropdownId) => {
-    setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
-  };
+  // const handleDropdownToggle = (dropdownId) => {
+  //   setOpenDropdown(openDropdown === dropdownId ? null : dropdownId);
+  // };
 
   const toggleDropdown = (id) => {
     setOpenDropdown(openDropdown === id ? null : id);
