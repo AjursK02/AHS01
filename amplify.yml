@@ -5,7 +5,6 @@ applications:
       phases:
         preBuild:
           commands:
-            - nvm install 16 # or your desired version
             - npm install
         build:
           commands:
