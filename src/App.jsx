@@ -11,7 +11,7 @@ import AiBlog from './components/AiBlog';
 import BlogDetail from './components/BlogDetail'; // Import your BlogDetail component
 import ProjectL01 from './components/ProjectL01';
 import TryProjectL01 from './components/TryProjectL01';
-
+import AboutPage from './components/AboutPage';
 const App = () => {
   return (
     <Router>
@@ -31,7 +31,9 @@ const App = () => {
           <Route path="/ai-blog" element={<AiBlog />} />
           <Route path="/try-l01" element={<TryProjectL01 />} />
           <Route path="/P01" element={<ProjectL01 />} />
-          <Route path="/ai-blog/:id" element={<BlogDetail />} /> {/* Dynamic route for blog details */}
+          <Route path="/about-page" element={<AboutPage />} />
+          <Route path="/ai-blog/:id" element={<BlogDetail />} />
+          <Route path="*" element={<h1>404 - Page Not Found</h1>} />
         </Routes>
       </div>
     </Router>
