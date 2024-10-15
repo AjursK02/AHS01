@@ -445,3 +445,31 @@
     width: 80px; /* Adjust search bar width */
   }
 }
+
+.navbar__logo-img {
+  width: 50px;
+  height: auto;
+  cursor: pointer;
+}
+
+.navbar__logo-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+button { 
+  background-color: #100e23;             
+  padding: 12px 20px;  
+  color: white;      
+  border: none;              
+  border-radius: 8px;        
+  font-size: 16px;           
+  cursor: pointer;           
+  transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+button:hover {
+  transform: scale(1.05);     
+}
+

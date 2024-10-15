@@ -1,0 +1,42 @@
+/* General styling for dark theme */
+body {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0;
+    height: 50vh;/* Light text for contrast */
+  }
+  
+  .about-container {
+    padding: 20px;
+    max-width: 800px;
+    margin-top: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  h1, h2 {
+    color: #ffffff;
+  }
+  
+  .about-content {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .about-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .about-list li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+  }
+  
+  .about-list strong {
+    color: #00bcd4; /* Highlighted text */
+  }
+  
