@@ -8,7 +8,7 @@ frontend:
       commands:
         - npm run build
   artifacts:
-    baseDirectory: /dist # Specify the directory where your build output is located
+    baseDirectory: /build # Specify the directory where your build output is located
     files:
       - '**/*'
   cache:
