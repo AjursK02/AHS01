@@ -22,6 +22,6 @@ This repository contains the complete codebase for the **Ajur's Insights** compa
 ## 🛠️ **Technologies Used**
 - **Frontend:** HTML5, CSS3, JavaScript
 - **Frameworks/Libraries:** (e.g., Bootstrap, React, or others, if applicable)
-- **Hosting:** Hosted live at [ajursinsghts.com](https://www.ajursinsghts.com)
+- **Hosting:** Hosted live at [ajursinsghts.com](https://www.ajursinsights.com)
 
 ---
