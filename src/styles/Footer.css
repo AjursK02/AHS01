@@ -1,14 +1,12 @@
 .footer-container {
   background-color: #121229;
   color: white;
-  padding-top: 50px ;
-  padding-right:50px 0 ;
-  padding-left: 50px 0;
+  padding-top: 10px ;
 }
 
 .newsletter-section {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .newsletter-section h2 {
@@ -69,8 +67,9 @@
 }
 
 .footer-logo img {
-  width: 300px;
-  height: 180px;
+  width: 120px;
+  height: 90px;
+  padding-left: 20px;
 }
 
 .footer-contact {
