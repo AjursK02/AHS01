@@ -67,13 +67,12 @@ const Navbar = () => {
         <Link to="/" className="navbar__logo-link">
           <h1>
             <span className="logo-line1">Ajurs Insights</span>
-            <span className="logo-line2">& Company</span>
           </h1>
         </Link>
       </div>
       <nav className={`navbar__nav ${mobileMenuOpen ? 'open' : ''}`}>
         <ul>
-          <li><Link to="/P01" className="ai-blog-button">Project L01</Link></li>
+          <li><Link to="/P01" className="ai-blog-button">MGI</Link></li>
           <li><Link to="/ai-blog" className="ai-blog-button">AI Blog</Link></li>
           <li><Link to="/about-page" className="ai-blog-button">About</Link></li>
         </ul>

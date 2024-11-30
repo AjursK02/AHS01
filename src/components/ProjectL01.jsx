@@ -32,12 +32,12 @@ const ProjectL01 = () => {
           <strong>Customized Model:</strong> In-depth detailed explanations + Comprehensive understanding of topics.
         </p>
         <div className="try-button-container">
-          <Link to="/try-l01" className="try-button">Try Project L01</Link>
+          <Link to="/try-l01" className="try-button">Try MGI</Link>
         </div>
       </section>
 
       <section className="section why-l01-section">
-        <h3 className="section-heading">Why L01</h3>
+        <h3 className="section-heading">Why MGI</h3>
         <div className="tabs">
           <div className="tab">
             <h4>Go-to Guide for Researchers</h4>
@@ -55,7 +55,7 @@ const ProjectL01 = () => {
       </section>
 
       <section className="section value-add-section">
-        <h3 className="section-heading">Value Add of L01</h3>
+        <h3 className="section-heading">Value Add of MGI</h3>
         <div className="value-list">
           <p>
             90% of students report that AI models provide high-level explanations that detract from a fundamental understanding of topics, which L01 solves with in-depth explanations.
