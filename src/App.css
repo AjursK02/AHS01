@@ -24,9 +24,9 @@
   color: white;
 }
 
-/* .App-link {
+.App-link {
   color: #61dafb;
-} */
+}
 
 @keyframes App-logo-spin {
   from {
@@ -45,9 +45,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
 }
 
-/* body {
+body {
   overflow: hidden;
-} */
+}
 
 
 
