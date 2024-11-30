@@ -72,8 +72,8 @@ AHS01/
 
 ## 📧 **Contact**
 For queries or collaboration, feel free to reach out at:
-- **Email:** info@ajursinsights.com
-- **Website:** [ajursinsghts.com](https://www.ajursinsights.com)
+- **Email:** ajursinsights@gmail.com
+- **Website:** [ajursinsights.com](https://www.ajursinsights.com)
 
 ---
 
