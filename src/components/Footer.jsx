@@ -73,7 +73,7 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom-line">
-        <p>©2024 Ajurs Insights & Company ® All rights reserved. Privacy Policy</p>
+        <p>©2024 Ajurs Insights ® All rights reserved. Privacy Policy</p>
         {/* <a href="#">Privacy Policy</a> */}
       </div>
     </div>

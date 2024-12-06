@@ -61,7 +61,7 @@ const ProjectL01 = () => {
             90% of students report that AI models provide high-level explanations that detract from a fundamental understanding of topics, which L01 solves with in-depth explanations.
           </p>
           <p>
-            Professors expressed that 70% of project and assignment submissions are derived from AI models without understanding the fundamental concepts. The implementation of L01 can restrict the usage of generic AI models.
+            Professors expressed that 70% of project and assignment submissions are derived from AI models without understanding the fundamental concepts. The implementation of MGI can restrict the usage of generic AI models.
           </p>
           <p>
             Improvement of teaching pedagogy can be achieved by leveraging the L01 model by researchers and professors.
