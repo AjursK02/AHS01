@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ProjectL01.css'; 
+import '../styles/ProjectMGI.css'; 
 import { Link } from 'react-router-dom';
 
 
@@ -13,17 +13,17 @@ const observer = new IntersectionObserver((entries, observer) => {
 }, { threshold: 0.1 }); 
 
 
-document.querySelectorAll('.section, .project-l01-container, .intro-section').forEach(section => {
+document.querySelectorAll('.section, .project-MGI-container, .intro-section').forEach(section => {
   observer.observe(section);
 });
 
-const ProjectL01 = () => {
+const ProjectMGI = () => {
 
   return (
-    <div className="project-l01-container">
+    <div className="project-MGI-container">
       <section className="section intro-section">
         <p className="highlighted-text">
-          L01 provides an in-depth explanation using reliable sources like textbooks and research papers to provide a foundational understanding.
+          MGI provides an in-depth explanation using reliable sources like textbooks and research papers to provide a foundational understanding.
         </p>
       </section>
 
@@ -32,17 +32,17 @@ const ProjectL01 = () => {
           <strong>Customized Model:</strong> In-depth detailed explanations + Comprehensive understanding of topics.
         </p>
         <div className="try-button-container">
-          <Link to="/try-l01" className="try-button">Try MGI</Link>
+          <Link to="/try-MGI" className="try-button">Try MGI</Link>
         </div>
       </section>
 
-      <section className="section why-l01-section">
+      <section className="section why-MGI-section">
         <h3 className="section-heading">Why MGI</h3>
         <div className="tabs">
           <div className="tab">
             <h4>Go-to Guide for Researchers</h4>
             <p>
-              L01 integrates research papers, textbooks, and reliable sources for authentic interpretation of content, serving as a mentor for research work.
+              MGI integrates research papers, textbooks, and reliable sources for authentic interpretation of content, serving as a mentor for research work.
             </p>
           </div>
           <div className="tab">
@@ -58,13 +58,13 @@ const ProjectL01 = () => {
         <h3 className="section-heading">Value Add of MGI</h3>
         <div className="value-list">
           <p>
-            90% of students report that AI models provide high-level explanations that detract from a fundamental understanding of topics, which L01 solves with in-depth explanations.
+            90% of students report that AI models provide high-level explanations that detract from a fundamental understanding of topics, which MGI solves with in-depth explanations.
           </p>
           <p>
             Professors expressed that 70% of project and assignment submissions are derived from AI models without understanding the fundamental concepts. The implementation of MGI can restrict the usage of generic AI models.
           </p>
           <p>
-            Improvement of teaching pedagogy can be achieved by leveraging the L01 model by researchers and professors.
+            Improvement of teaching pedagogy can be achieved by leveraging the MGI model by researchers and professors.
           </p>
         </div>
       </section>
@@ -72,4 +72,4 @@ const ProjectL01 = () => {
   );
 };
 
-export default ProjectL01;
+export default ProjectMGI;
