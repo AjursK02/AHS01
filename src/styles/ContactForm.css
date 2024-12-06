@@ -139,7 +139,7 @@
   background-color: #0af2f2;
   font-weight: bold; /* Bright button color */
   color: #022b2c;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1.1em; /* Slightly larger font */
   transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform effect */
@@ -147,12 +147,13 @@
 }
 
 .form-left button:hover {
-  background-color: #007bb5; /* Darker shade on hover */
+  background-color: #06f1b7; /* Darker shade on hover */
   transform: translateY(-3px); /* Lift effect on hover */
 }
 
 /* Form right styling */
 .form-right {
+  padding-top: 200px;
   width: 30%;
   display: flex;
   flex-direction: column;
