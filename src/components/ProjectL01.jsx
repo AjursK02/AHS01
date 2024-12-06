@@ -32,7 +32,7 @@ const ProjectMGI = () => {
           <strong>Customized Model:</strong> In-depth detailed explanations + Comprehensive understanding of topics.
         </p>
         <div className="try-button-container">
-          <Link to="/try-MGI" className="try-button">Try MGI</Link>
+          <Link to="/try-l01" className="try-button">Try MGI</Link>
         </div>
       </section>
 
