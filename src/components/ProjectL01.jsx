@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/ProjectMGI.css'; 
+import '../styles/ProjectL01.css'; 
 import { Link } from 'react-router-dom';
 
 
