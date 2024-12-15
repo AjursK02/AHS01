@@ -34,13 +34,18 @@ const BlogDetail = () => {
         {blogPosts.filter(relatedPost => relatedPost.id !== post.id).map((relatedPost) => (
           <div className="blog-post" key={relatedPost.id}>
             <Link to={`/ai-blog/${relatedPost.id}`}>
-              <img src={relatedPost.image} alt={relatedPost.title} />
+              <img
+                src={images[relatedPost.image]}
+                alt={relatedPost.title}
+                className="related-post-image"
+              />
               <h3>{relatedPost.title}</h3>
               <p className="date">{relatedPost.date}</p>
             </Link>
           </div>
         ))}
       </div>
+
     </div>
   );
 };

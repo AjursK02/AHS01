@@ -102,3 +102,155 @@ body, h1, h2, p, a, img, div {
   width: 100%;
   justify-content: space-between;
 }
+
+/* Media Queries for responsiveness */
+
+/* Mobile (portrait) */
+@media (max-width: 600px) {
+  .main-container {
+    padding: 15px;
+  }
+
+  .main-title {
+    font-size: 1.8em;
+  }
+
+  .top-section, .bottom-section, .full-width-section {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .text-container, .image-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .story-title {
+    font-size: 1.5em;
+  }
+
+  .story-description {
+    font-size: 1em;
+  }
+
+  .cover-image {
+    max-height: 250px;
+  }
+
+  .link {
+    font-size: 0.9em;
+  }
+}
+
+/* Tablet (portrait and landscape) */
+@media (max-width: 768px) {
+  .top-section, .bottom-section, .full-width-section {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .text-container, .image-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .story-title {
+    font-size: 1.7em;
+  }
+
+  .story-description {
+    font-size: 1.1em;
+  }
+
+  .cover-image {
+    max-height: 280px;
+  }
+}
+
+/* Small Laptop */
+@media (max-width: 1024px) {
+  .top-section, .bottom-section, .full-width-section {
+    flex-direction: row;
+    padding: 25px;
+  }
+
+  .text-container, .image-container {
+    max-width: 50%;
+    padding: 20px;
+  }
+
+  .story-title {
+    font-size: 1.8em;
+  }
+
+  .story-description {
+    font-size: 1.1em;
+  }
+
+  .cover-image {
+    max-height: 300px;
+  }
+}
+
+/* Large Desktop */
+@media (max-width: 1280px) {
+  .main-container {
+    padding: 25px;
+  }
+
+  .top-section, .bottom-section, .full-width-section {
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .text-container, .image-container {
+    max-width: 50%;
+    padding: 25px;
+  }
+
+  .story-title {
+    font-size: 2em;
+  }
+
+  .story-description {
+    font-size: 1.2em;
+  }
+
+  .cover-image {
+    max-height: 320px;
+  }
+}
+
+/* TV (large screens) */
+@media (min-width: 1600px) {
+  .main-container {
+    max-width: 1600px;
+    padding: 40px;
+  }
+
+  .main-title {
+    font-size: 3em;
+  }
+
+  .top-section, .bottom-section, .full-width-section {
+    flex-direction: row;
+    padding: 40px;
+  }
+
+  .text-container, .image-container {
+    max-width: 50%;
+    padding: 30px;
+  }
+
+  .story-title {
+    font-size: 2.2em;
+  }
+
+  .story-description {
+    font-size: 1.3em;
+  }
+
+  .cover-image {
+    max-height: 350px;
+  }
+}

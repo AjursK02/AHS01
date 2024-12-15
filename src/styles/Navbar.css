@@ -473,3 +473,17 @@ button:hover {
   transform: scale(1.05);     
 }
 
+@media (max-width: 768px) {
+  .navbar__nav ul {
+      flex-direction: column;
+      gap: 1rem;
+  }
+  .navbar__actions-row {
+      flex-direction: column;
+      gap: 0.5rem;
+  }
+}
+
+[aria-expanded="true"] .dropdown-content {
+  display: block;
+}

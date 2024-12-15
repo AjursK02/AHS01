@@ -1,42 +1,51 @@
-/* EmailSubscription.css */
-
+/* Default styles for all devices */
 .subscription-container {
-    height: 200px; /* Fixed height */
-    margin-top: 15rem;
-    background-color: #AFEEEE; /* Light cyan background */
-    padding: 2rem;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background-color: #F0F8FF; /* Light airy background for a fresh feel */
+    padding: 3rem 2rem; /* Spacious padding */
+    border-radius: 12px; /* Rounded corners for a modern look */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Deep shadow for depth */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     text-align: center; /* Center text */
-    animation: fadeIn 0.5s ease-in; /* Fade-in animation */
+    animation: fadeIn 0.6s ease-out; /* Smooth fade-in animation */
+    max-width: 500px; /* Limit the width to make it compact on larger screens */
+    margin: 0 auto; /* Center on the page */
+    height: 400px;
 }
 
+/* Title and Description */
 .subscription-title {
-    font-size: 1.75rem; /* Slightly larger title */
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #333; /* Darker text color */
+    font-size: 2rem; /* Large title for better readability */
+    font-weight: 600; /* Slightly bolder font */
+    margin-bottom: 0.75rem;
+    color: #2B3A42; /* Darker text color for contrast */
+    letter-spacing: 0.5px; /* Slightly more spaced letters */
 }
 
 .subscription-description {
-    margin-bottom: 1rem;
-    color: #666; /* Medium gray */
+    font-size: 1.125rem; /* Slightly smaller text */
+    margin-bottom: 1.5rem; /* More space between title and form */
+    color: #5C6B73; /* Medium gray for better readability */
 }
 
+/* Error and Success Messages */
 .error-message {
-    color: #e63946; /* Red color for errors */
-    margin-bottom: 0.5rem;
+    color: #e63946; /* Red for errors */
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
 .success-message {
-    color: #2a9d8f; /* Green color for success */
-    margin-bottom: 0.5rem;
+    color: #2a9d8f; /* Green for success */
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
 }
 
+/* Subscription Form */
 .subscription-form {
     display: flex;
     flex-direction: column;
@@ -46,15 +55,19 @@
 .input-container {
     display: flex;
     width: 100%; /* Full width for input */
+    flex-wrap: wrap; /* Allow the button to stack below the input on smaller screens */
+    gap: 10px; /* Small gap between input and button */
 }
 
+/* Input Fields */
 .email-input {
     flex-grow: 1;
-    padding: 0.75rem; /* Adjusted padding */
-    border: 1px solid #ccc; /* Light gray border */
-    border-radius: 4px 0 0 4px; /* Rounded left corners */
+    padding: 1rem; /* Larger padding for a more comfortable input field */
+    border: 2px solid #ccc; /* Subtle border */
+    border-radius: 25px; /* Rounded corners for the input */
     font-size: 1rem;
-    transition: border 0.3s; /* Smooth border transition */
+    transition: all 0.3s ease; /* Smooth transition */
+    margin-bottom: 1rem;
 }
 
 .email-input:focus {
@@ -62,28 +75,127 @@
     outline: none; /* Remove default outline */
 }
 
+/* Buttons */
 .subscribe-button {
-    background-color: #264653; /* Dark teal */
+    background-color: #264653; /* Dark teal background */
     color: white;
-    padding: 0.75rem 1rem; /* Adjusted padding */
-    border: none; /* Remove border */
-    border-radius: 0 4px 4px 0; /* Rounded right corners */
+    padding: 1rem 2rem; /* Larger button with more padding */
+    border: none;
+    border-radius: 25px; /* Rounded corners for the button */
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .subscribe-button:hover {
     background-color: #2a9d8f; /* Lighter teal on hover */
-    transform: translateY(-3px); /* Lift effect on hover */
+    transform: translateY(-5px); /* Subtle lift effect */
 }
 
+.subscribe-button:focus {
+    outline: none; /* Remove focus outline */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Slight shadow on focus */
+}
+
+/* Keyframe for Fade-in */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Slide in from below */
+        transform: translateY(20px); /* Slide-in effect from below */
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Original position */
+        transform: translateY(0); /* Final position */
+    }
+}
+
+/* Media Queries for responsiveness */
+
+/* Mobile devices (portrait and landscape) */
+@media (max-width: 600px) {
+    .subscription-container {
+        padding: 2rem 1.5rem; /* Less padding on mobile */
+    }
+
+    .subscription-title {
+        font-size: 1.5rem; /* Smaller title */
+    }
+
+    .subscription-description {
+        font-size: 1rem; /* Smaller description */
+    }
+
+    .email-input {
+        padding: 0.875rem; /* Adjusted padding */
+    }
+
+    .subscribe-button {
+        padding: 0.875rem 1.5rem; /* Adjust button padding */
+    }
+
+    .input-container {
+        flex-direction: column; /* Stack input and button vertically */
+        width: 100%; /* Full width */
+    }
+}
+
+/* Tablet devices (portrait and landscape) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .subscription-container {
+        padding: 2.5rem 1.5rem; /* Adjust padding */
+    }
+
+    .subscription-title {
+        font-size: 1.75rem; /* Slightly smaller title for tablets */
+    }
+
+    .subscription-description {
+        font-size: 1.125rem; /* Adjust description text */
+    }
+
+    .email-input {
+        padding: 1rem; /* Maintain consistent padding */
+    }
+
+    .subscribe-button {
+        padding: 1rem 1.75rem; /* Adjust button padding */
+    }
+}
+
+/* Laptops and desktops */
+@media (min-width: 901px) and (max-width: 1440px) {
+    .subscription-container {
+        padding: 3rem 2rem; /* Keep original padding */
+    }
+
+    .subscription-title {
+        font-size: 2rem; /* Larger title for desktop */
+    }
+
+    .subscription-description {
+        font-size: 1.125rem; /* Adjust description text */
+    }
+}
+
+/* Large screens (TV, large desktops) */
+@media (min-width: 1441px) {
+    .subscription-container {
+        padding: 3rem 2.5rem; /* Consistent padding for larger screens */
+    }
+
+    .subscription-title {
+        font-size: 2.25rem; /* Larger title for large screens */
+    }
+
+    .subscription-description {
+        font-size: 1.25rem; /* Slightly larger description text */
+    }
+
+    .email-input {
+        padding: 1.25rem; /* Adjust input padding */
+    }
+
+    .subscribe-button {
+        padding: 1.25rem 2rem; /* Adjust button padding */
     }
 }
