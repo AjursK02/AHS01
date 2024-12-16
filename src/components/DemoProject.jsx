@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/DemoProject.css";
+import { Link } from 'react-router-dom';
 
 const DemoProject = () => {
   return (
@@ -7,11 +8,11 @@ const DemoProject = () => {
       <div className="demo-project-background">
         <h2 className="demo-title">Demo Product</h2>
         <p className="demo-description">
-          The L01 model is a conversational AI model where users can get detailed explanations with an organized structure.
+          The MGI model is a conversational AI model where users can get detailed explanations with an organized structure.
         </p>
-        <a href="https://your-web-app-link.com" className="demo-link" target="_blank" rel="noopener noreferrer">
+        <Link to="/try-l01" className="demo-link" target="_parent" rel="noopener noreferrer">
           Link to Web App
-        </a>
+        </Link>
       </div>
     </div>
   );
