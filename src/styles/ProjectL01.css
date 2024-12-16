@@ -1,27 +1,27 @@
 body {
   font-family: 'Poppins', sans-serif;
-  background-image: url('../assets/back.jpg'); /* Correct relative path */
+  background-image: url('../assets/back.jpg');
   background-size: cover;
   background-position: center;
-  color: #C9D1D9; /* Light text for readability */
+  color: #C9D1D9;
+  margin: 0;
+  padding: 0;
 }
 
-/* Main Container */
 .project-MGI-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 50px;
+  padding: 50px 20px;
   background: transparent;
   border-radius: 15px;
-  box-shadow: none; /* Remove harsh box shadows */
+  box-shadow: none;
   transition: transform 0.3s ease-in-out, background-color 0.5s;
   margin-top: 130px;
-  opacity: 0; /* Start hidden */
-  transform: translateY(20px); /* Start slightly down */
-  animation: fadeInUp 0.5s forwards; /* Animation on load */
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s forwards;
 }
 
-/* Fade-in Up Animation */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -29,34 +29,30 @@ body {
   }
 }
 
-/* Section Styles */
 .section {
   margin-bottom: 50px;
-  padding: 40px;
-  background-color: transparent; /* Very transparent background */
+  padding: 30px;
+  background-color: transparent;
   border-radius: 20px;
-  box-shadow: none; /* Remove box-like shadows */
+  box-shadow: none;
   transition: transform 0.3s ease-in-out, background-color 0.5s ease;
 }
 
-/* Intro Section with dark gradient */
 .intro-section {
-  background: linear-gradient(135deg, #1F6FEB, #161B22); /* Darker gradient */
-  border-left: 5px solid #1F6FEB; /* Vertical accent line */
+  background: linear-gradient(135deg, #1F6FEB, #161B22);
+  border-left: 5px solid #1F6FEB;
   transition: background-color 0.3s ease;
 }
 
-/* Highlighted Text */
 .highlighted-text {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 600;
-  color: #050008; /* Lighter blue */
+  color: #050008;
   text-align: center;
   line-height: 1.8;
-  animation: slideIn 0.6s forwards; /* Animation on load */
+  animation: slideIn 0.6s forwards;
 }
 
-/* Slide-in Animation */
 @keyframes slideIn {
   from {
     transform: translateY(10px);
@@ -68,51 +64,46 @@ body {
   }
 }
 
-/* Heading Styles */
 .section-heading {
-  font-size: 2.5rem;
-  color: #C9D1D9; /* Lighter text for headings */
-  margin-bottom: 30px;
+  font-size: 2.2rem;
+  color: #C9D1D9;
+  margin-bottom: 20px;
   text-align: center;
-  border-bottom: 2px solid #58A6FF; /* Underline with light blue accent */
+  border-bottom: 2px solid #58A6FF;
   padding-bottom: 10px;
   transition: color 0.3s ease;
 }
 
 .section-heading:hover {
-  color: #58A6FF; /* Change color on hover */
+  color: #58A6FF;
 }
 
-/* Tabs Styles */
 .tabs {
   display: flex;
-  flex-direction: row;
-  gap: 25px;
+  flex-direction: column;
+  gap: 20px;
 }
 
-/* Tab Styles */
 .tab {
-  flex: 1;
-  padding: 30px;
-  background-color: transparent; /* Dark background */
+  padding: 20px;
+  background-color: transparent;
   border-radius: 15px;
-  box-shadow: none; /* No box shadow */
+  box-shadow: none;
   transition: transform 0.3s ease-in-out, background-color 0.5s ease;
   position: relative;
-  transform: scale(1); /* Initial scale */
+  transform: scale(1);
 }
 
 .tab:hover {
-  transform: scale(1.05); /* Scale up on hover */
+  transform: scale(1.05);
 }
 
 .tab h4 {
-  margin-bottom: 15px;
-  font-size: 1.6rem;
-  color: #58A6FF; /* Light blue for headings */
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  color: #58A6FF;
 }
 
-/* Decorative element in tabs */
 .tab::before {
   content: '';
   position: absolute;
@@ -120,48 +111,152 @@ body {
   left: 20px;
   width: 50px;
   height: 5px;
-  background: #58A6FF; /* Accent color */
+  background: #58A6FF;
   border-radius: 3px;
 }
 
-/* Paragraph Text Styles */
 p {
-  font-size: 1.2rem;
-  line-height: 1.9;
-  margin-bottom: 20px;
-  color: #C9D1D9; /* Light text */
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #C9D1D9;
 }
 
-/* Value Section Styles */
 .value-add-section {
-  background-color: transparent; /* Dark background */
+  background-color: transparent;
 }
 
-/* Value List Styles */
 .value-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-/* Try Button Styles */
 .try-button-container {
-  margin-top: 40px;
+  margin-top: 30px;
   text-align: center;
 }
 
 .try-button {
   text-decoration: none;
-  background: linear-gradient(to right, #58A6FF, #1F6FEB); /* Gradient for premium feel */
+  background: linear-gradient(to right, #58A6FF, #1F6FEB);
   color: #FFFFFF;
-  padding: 15px 50px;
+  padding: 12px 40px;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 1.4rem;
-  box-shadow: none; /* Remove harsh shadow */
+  font-size: 1.2rem;
+  box-shadow: none;
   transition: transform 0.3s ease-in-out, background-color 0.3s ease;
 }
 
 .try-button:hover {
-  transform: translateY(-5px); /* Move button up on hover */
+  transform: translateY(-5px);
+}
+
+/* Media Queries for Responsive Design */
+
+/* For small screens (mobile devices) */
+@media (max-width: 600px) {
+  .project-MGI-container {
+    padding: 20px;
+    margin-top: 100px;
+  }
+
+  .section {
+    padding: 20px;
+  }
+
+  .highlighted-text {
+    font-size: 1rem;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .tab {
+    padding: 15px;
+  }
+
+  .try-button {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+}
+
+/* For medium screens (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .project-MGI-container {
+    padding: 30px;
+  }
+
+  .section {
+    padding: 25px;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  .tabs {
+    flex-direction: row;
+    gap: 15px;
+  }
+
+  .tab {
+    padding: 20px;
+  }
+
+  .try-button {
+    font-size: 1.1rem;
+    padding: 12px 35px;
+  }
+}
+
+/* For large screens (laptops and desktops) */
+@media (min-width: 1025px) and (max-width: 1920px) {
+  .project-MGI-container {
+    padding: 40px;
+  }
+
+  .section {
+    padding: 30px;
+  }
+
+  .tabs {
+    flex-direction: row;
+    gap: 25px;
+  }
+}
+
+/* For extra-large screens (TVs) */
+@media (min-width: 1921px) {
+  .project-MGI-container {
+    padding: 60px;
+  }
+
+  .section {
+    padding: 50px;
+  }
+
+  .highlighted-text {
+    font-size: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 3rem;
+  }
+
+  .tabs {
+    gap: 30px;
+  }
+
+  .try-button {
+    font-size: 1.5rem;
+    padding: 20px 60px;
+  }
 }

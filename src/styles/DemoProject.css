@@ -1,14 +1,14 @@
-/* Container Styles */
+/* General Styles */
 .demo-project-container {
-  background: rgba(255, 255, 255, 0.15); /* Transparent background for glass effect */
-  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   padding: 60px 30px;
   border-radius: 25px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   max-width: 900px;
   margin: 60px auto;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border for glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
@@ -17,32 +17,32 @@
 /* Title Styles */
 .demo-title {
   font-size: 2.6rem;
-  color: #f0f0f0; /* Light gray for modern, soft look */
+  color: #f0f0f0;
   font-weight: 700;
   margin-bottom: 25px;
   text-transform: none;
   letter-spacing: 0.8px;
   position: relative;
   z-index: 2;
-  opacity: 0.9; /* Slightly reduced opacity for a softer feel */
+  opacity: 0.9;
 }
 
 /* Description Styles */
 .demo-description {
   font-size: 1.3rem;
-  color: #dcdcdc; /* Lighter color for readability and modern style */
+  color: #dcdcdc;
   line-height: 1.7;
   margin-bottom: 35px;
   position: relative;
   z-index: 2;
-  opacity: 0.85; /* Keep consistent opacity for better layering */
+  opacity: 0.85;
 }
 
 /* Link Button Styles */
 .demo-link {
   font-size: 1.3rem;
   color: #fff;
-  background: linear-gradient(135deg, #007bff, #00c6ff); /* Trendy gradient button */
+  background: linear-gradient(135deg, #007bff, #00c6ff);
   padding: 12px 35px;
   border-radius: 30px;
   text-decoration: none;
@@ -52,8 +52,8 @@
 }
 
 .demo-link:hover {
-  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6); /* Glow effect */
-  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.6);
+  transform: translateY(-5px);
 }
 
 /* Hover Effect on Container */
@@ -83,4 +83,95 @@
   height: 300px;
   background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
   z-index: 1;
+}
+
+/* Responsive Styles */
+
+/* For small devices (phones) */
+@media (max-width: 480px) {
+  .demo-project-container {
+    padding: 40px 20px;
+    margin: 30px auto;
+    max-width: 90%;
+  }
+
+  .demo-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .demo-description {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+  }
+
+  .demo-link {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .demo-project-container {
+    padding: 50px 25px;
+    margin: 40px auto;
+    max-width: 80%;
+  }
+
+  .demo-title {
+    font-size: 2.3rem;
+  }
+
+  .demo-description {
+    font-size: 1.2rem;
+  }
+
+  .demo-link {
+    font-size: 1.1rem;
+    padding: 10px 30px;
+  }
+}
+
+/* For larger screens (laptops, desktops) */
+@media (min-width: 769px) and (max-width: 1440px) {
+  .demo-project-container {
+    padding: 60px 40px;
+    margin: 50px auto;
+    max-width: 70%;
+  }
+
+  .demo-title {
+    font-size: 2.5rem;
+  }
+
+  .demo-description {
+    font-size: 1.3rem;
+  }
+
+  .demo-link {
+    font-size: 1.2rem;
+    padding: 12px 35px;
+  }
+}
+
+/* For extra-large screens (TVs, 4K displays) */
+@media (min-width: 1441px) {
+  .demo-project-container {
+    padding: 80px 50px;
+    max-width: 60%;
+  }
+
+  .demo-title {
+    font-size: 3rem;
+  }
+
+  .demo-description {
+    font-size: 1.5rem;
+  }
+
+  .demo-link {
+    font-size: 1.4rem;
+    padding: 15px 40px;
+  }
 }
