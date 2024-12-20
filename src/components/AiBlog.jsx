@@ -9,8 +9,8 @@ import img1 from '../assets/img1.jpeg';
 import img2 from '../assets/img2.jpeg';
 
 const images = {
-  'assets/img1.jpeg': img1,
-  'assets/img2.jpeg': img2,
+  'assets/img1.jpeg': '/assets/img1.jpeg',
+  'assets/img2.jpeg': '/assets/img2.jpeg',
 };
 
 const AiBlog = () => {
