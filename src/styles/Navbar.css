@@ -54,6 +54,9 @@
   display: flex; /* Hidden by default */
   position: center;
   top: 70px;
+  right: 40px;
+  margin-left: 10px;
+  margin-right: 40px;
   justify-content: space-evenly;
   gap: 16rem;
   left: 0;
