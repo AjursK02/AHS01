@@ -81,8 +81,8 @@
 /* Right Section */
 .navbar-right {
   display: flex;
-  margin-left: 0%;
-  margin-right: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .navbar-right ul {
@@ -175,7 +175,7 @@
   display: none;
   position: absolute;
   top: 3.5rem; /* Adjust the position relative to "Sign In" and "Subscribe" */
-  right: 1rem;
+  right: 0.5rem;
   background-color: #0d0b21;
   padding: 1rem;
   border-radius: 5px;
@@ -187,7 +187,7 @@
 
 .navbar__search-container.active {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   opacity: 1;
 }
@@ -212,9 +212,12 @@
   background-color: transparent;
 }
 
-.search-bar.open {
-  width: 200px;
+.search-bar.open  {
+  width: 100px;
   opacity: 1;
+  right: 0;
+  margin-right: 0;
+  margin-left: 20px;
   border-color: #000;
 }
 
