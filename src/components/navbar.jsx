@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react'; 
-import '../styles/Navbar.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import SignIn from "./SignIn";
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/logo.png'; // Import your logo image
+import logo from '../assets/logo.png';
+import '../styles/Navbar.css';
+import SignIn from './SignIn';
 
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState(null);
   const [searchOpen, setSearchOpen] = useState(false);
   const [showSignIn, setShowSignIn] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState(null); 
   const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleDropdown = (id) => {
@@ -33,71 +32,112 @@ const Navbar = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  useEffect(() => {
-    const handleClickOutside = (e) => {
-      const isDropdownButton = e.target.matches("[data-dropdown-button]");
-      if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return;
+  const closeDropdown = () => {
+    setOpenDropdown(null);
+    setMobileMenuOpen(false);
+  };
 
-      if (isDropdownButton) {
-        setActiveDropdown((prev) =>
-          prev === e.target.closest("[data-dropdown]") ? null : e.target.closest("[data-dropdown]")
-        );
-      } else {
-        setActiveDropdown(null);
+  useEffect(() => {
+    // Handle clicks outside dropdown and menu to close them
+    const handleClickOutside = (e) => {
+      if (!e.target.closest('.navbar')) {
+        closeDropdown();
       }
     };
 
+    // Detect scroll to add sticky effect
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 0);
     };
 
+    document.addEventListener('click', handleClickOutside);
     window.addEventListener('scroll', handleScroll);
-    document.addEventListener("click", handleClickOutside);
 
     return () => {
+      document.removeEventListener('click', handleClickOutside);
       window.removeEventListener('scroll', handleScroll);
-      document.removeEventListener("click", handleClickOutside);
     };
   }, []);
 
   return (
-    <header className={`navbar ${isScrolled ? 'navbar--scrolled' : ''}`}>
-      <div className="navbar__logo">
-        <img src={logo} alt="Ajurs Insights & Company" onClick={toggleMobileMenu} className="navbar__logo-img" />
-        <Link to="/" className="navbar__logo-link">
-          <h1>
-            <span className="logo-line1">Ajurs Insights</span>
-          </h1>
-        </Link>
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="navbar-left">
+        <a href='/'><img src={logo} alt="logo" className="logo"  /></a>
+        <span className="brand-name"><a href="/">Ajurs Insights</a></span>
       </div>
-      <nav className={`navbar__nav ${mobileMenuOpen ? 'open' : ''}`}>
-        <ul>
-          <li><Link to="/P01" className="ai-blog-button">MGI</Link></li>
-          <li><Link to="/ai-blog" className="ai-blog-button">AI Blog</Link></li>
-          <li><Link to="/about-page" className="ai-blog-button">About</Link></li>
-        </ul>
-      </nav>
-      <div className="navbar__actions">
-        <div className="navbar__actions-row">
-          <button href="#" onClick={toggleSignIn}>Sign In</button>
-          <h3>|</h3>
-          <button href="#subscribe" className="subscribe">Subscribe</button>
+
+      {/* Hamburger menu for mobile */}
+      <button className="hamburger" onClick={toggleMobileMenu}>
+        <i className="fas fa-bars"></i>
+      </button>
+
+      <div className={`navbar-center ${mobileMenuOpen ? 'open' : ''}`}>
+        <div className="desktop-menu">
+          <ul className="nav-links">
+            <Link to="/ProjectL01" onClick={closeDropdown}>
+              <li>MGI</li>
+            </Link>
+            <Link to="/AiBlog" onClick={closeDropdown}>
+              <li>AI Blog</li>
+            </Link>
+            <Link to="/AboutPage" onClick={closeDropdown}>
+              <li>About</li>
+            </Link>
+          </ul>
         </div>
-        <div className="navbar__search-container">
-          <a href="#search" className="search-icon" onClick={toggleSearch}>
-            <i className="fas fa-search"></i>
-          </a>
-          {searchOpen && (
-            <input
-              type="text"
-              className={`search-bar ${searchOpen ? 'open' : ''}`}
-              placeholder="Search..."
-            />
-          )}
+
+        <div className="desktop-actions">
+          <ul className="actions">
+            <li href="#" onClick={toggleSignIn}>Sign In |</li>
+            <li href="#subscribe">Subscribe |</li>
+            <a href="#search">
+              <li className="search-icon" onClick={toggleSearch}>
+                <i className="fas fa-search"></i>
+              </li>
+            </a>
+            {searchOpen && (
+              <input
+                type="text"
+                className={`search-bar ${searchOpen ? 'open' : ''}`}
+                placeholder="Search..."
+              />
+            )}
+          </ul>
+        </div>
+
+        {/* Mobile dropdown menu */}
+        <div className={`mobile-dropdown ${mobileMenuOpen ? 'open' : ''}`}>
+          <ul className="nav-links">
+            <Link to="/ProjectL01" onClick={closeDropdown}>
+              <li>MGI</li>
+            </Link>
+            <Link to="/AiBlog" onClick={closeDropdown}>
+              <li>AI Blog</li>
+            </Link>
+            <Link to="/AboutPage" onClick={closeDropdown}>
+              <li>About</li>
+            </Link>
+            <li href="#" onClick={toggleSignIn}>Sign In |</li>
+            <li href="#subscribe">Subscribe |</li>
+            <a href="#search">
+              <li className="search-icon && navbar__search-container" onClick={toggleSearch}>
+                <i className="fas fa-search"></i>
+              </li>
+            </a>
+            {searchOpen && (
+              <input
+                type="text"
+                className={`search-bar ${searchOpen ? 'open' : ''}`}
+                placeholder="Search..."
+              />
+            )}
+          </ul>
         </div>
       </div>
+
+      {/* Sign In Modal */}
       {showSignIn && <SignIn onClose={closeSignIn} />}
-    </header>
+    </nav>
   );
 };
 

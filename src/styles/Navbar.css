@@ -1,189 +1,214 @@
-/* Navbar CSS */
+/* General Navbar Styles */
 .navbar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #0d0b21;
+  color: white;
+  font-family: 'Poppins', sans-serif;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  transition: background-color 0.3s, height 0.3s;
-  background-color: rgba(16, 14, 35, 1);
-  padding: 1rem 2rem;
-  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo and Brand Name */
+.navbar-left {
+  margin-left: 0%;
+  margin-right: 26%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100px; /* Full height */
-}
-
-.navbar--scrolled {
-  height: 80px; /* Shrink height */
-  padding: 0.5rem 2rem;
-  background-color: rgba(16, 14, 35, 1); /* Opaque when scrolled */
-}
-
-.navbar--scrolled .navbar__logo h1 {
-  font-size: 1.5rem; /* Shrink logo size */
-}
-
-
-.navbar__logo {
-  display: flex;
-  align-items: center;
-}
-
-
-.navbar__logo .material-icons {
-  font-size: 1.5rem;
-  color: #e0f7fa;
-}
-
-.navbar__logo h1 {
-  font-size: 2rem;
-  margin: 0;
-  font-family: 'Playfair Display', serif;
-  color: #e0f7fa;
-}
-
-.logo-line1,
-.logo-line2 {
-  display: block;
-  line-height: 1.2;
-}
-
-.logo-line1 {
-  font-weight: 700;
-}
-
-.logo-line2 {
-  margin-left: 4.2rem;
-  font-weight: 400;
-}
-
-/* Navbar navigation styles */
-.navbar__nav ul {
-  list-style: none;
-  display: flex;
-  gap: 4rem;
-  margin: 0;
   padding: 0;
   align-items: center;
-  padding-left: 8rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
 }
 
-.navbar__nav ul li {
-  position: relative;
-  padding-bottom: 10px;
+.logo {
+  width: 10px;
+  height: 40px;
+  padding: 0;
+  margin-right: 0.5rem;
 }
 
-.navbar__nav ul li a {
-  text-decoration: none;
-  color: #e0f7fa;
-  font-weight: 500;
+.brand-name {
+  font-size: 1.5rem;
+  color: #03b2ca;
+  font-weight: bold;
 }
 
-.navbar__nav ul .dropdown-content {
+/* Hamburger Icon */
+.hamburger {
   display: none;
-  position: absolute;
-  top: 100%;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.navbar-center {
+  display: flex; /* Hidden by default */
+  position: center;
+  top: 70px;
+  justify-content: space-evenly;
+  gap: 16rem;
   left: 0;
-  background-color: #fff;
-  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
-  padding: 0.5rem 0;
-  margin-top: 1.5rem;
-  z-index: 1;
-  border-radius: 0.3rem;
-  animation: glowEffect 0.5s ease-in-out forwards;
+  background-color: #0d0b21;
+  width: 100%;
+  align-items: center;
 }
 
-.navbar__nav ul .dropdown-content li {
-  margin: 1rem 0.5rem;
-  padding-bottom: 2rem;
-}
-
-.navbar__nav ul .dropdown-content li a {
-  text-decoration: none;
-  color: #e0f7fa;
-}
-
-/* Keep dropdown content open when hovered */
-.navbar__nav ul li:hover .dropdown-content,
-.navbar__nav ul .dropdown-content:hover {
-  display: block;
-}
-
-/* Glowing effect animation */
-@keyframes glowEffect {
-  0% {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  }
-  100% {
-    box-shadow: 0 0 15px #FF426F;
-  }
-}
-
-/* Action button styles */
-.navbar__actions {
+.navbar-center ul {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
 }
 
-.navbar__actions-row {
+.navbar-center ul li {
+  cursor: pointer;
+  color: white;
+}
+
+.navbar-center ul li:hover {
+  color: #03b2ca;
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  margin-left: 0%;
+  margin-right: 60px;
+}
+
+.navbar-right ul {
+  display: flex; /* Arrange the list items in a row */
+  gap: 1rem; /* Space between items */
+  justify-content: space-between;
+  align-items: center; /* Ensure the text inside items is centered vertically */
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove extra space */
+  padding: 0; /* Ensure padding does not cause misalignment */
+}
+
+.navbar-right ul li {
+  cursor: pointer; /* Show pointer for clickable items */
+  padding: 0.5rem; /* Add slight padding for click space */
+  margin: 0; /* Ensure no extra margin */
+}
+
+.navbar-right .search-icon {
+  font-size: 1.2rem; /* Adjust the font size */
+  display: flex; /* To align icon */
+  align-items: center; /* Center icon vertically */
+}
+
+/* Desktop Menu (Default) */
+.desktop-menu, .desktop-actions {
+  margin-left: 0%;
+  margin-right: 8%;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  font-size: 1rem;
-  padding-right: 40px;
 }
 
-.navbar__actions-row a {
-  text-decoration: none;
-  color: #e0f7fa;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
+.desktop-menu ul, .desktop-actions ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
-.navbar__actions h3 {
-  font-size: 1rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  color: #e0f7fa
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
+.hamburger-icon {
+  background-color: #333;
+  height: 4px;
+  width: 100%;
+}
 
+/* Mobile dropdown for visibility */
+.mobile-dropdown {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #0d0b21;  /* Same background as navbar for consistency */
+  position: absolute;
+  top: 60px;  /* Adjust according to your navbar height */
+  left: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 100;  /* Ensures it stays on top of other content */
+}
+
+.mobile-dropdown.open {
+  display: flex;  /* Makes dropdown visible when 'open' class is added */
+}
+
+/* Remove default anchor styles */
+.nav-links a, .actions a ,.logo a ,.brand-name a{
+  text-decoration: none; /* Remove underline */
+  color: white; /* Make link color white (or the same as text color) */
+}
+
+/* Add hover styles to retain some interactivity */
+.nav-links a:hover, .actions a:hover ,.logo a:hover ,.brand-name a{
+  color: #03b2ca; /* Color change on hover */
+}
+
+/* Optional: You can remove the underline even on hover */
+.nav-links a:hover, .actions a:hover ,.logo a:hover ,.brand-name a{
+  text-decoration: none; /* Ensures no underline on hover */
+}
 
 /* Search bar styles */
 .navbar__search-container {
+  display: none;
+  position: absolute;
+  top: 3.5rem; /* Adjust the position relative to "Sign In" and "Subscribe" */
+  right: 1rem;
+  background-color: #0d0b21;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.navbar__search-container.active {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  position: relative;
+  opacity: 1;
 }
 
 .search-icon {
-  font-size: 1.5rem;
   cursor: pointer;
-  color: #e0f7fa;
-  padding-right: 40px;
+  font-size: 1.5rem;
+  color: #03b2ca;
 }
 
 .search-bar {
+  width: 100%; /* Full width inside container */
+  opacity: 1;
   border: none;
   border-bottom: 1px solid #ccc;
   outline: none;
   padding: 0.5rem;
-  margin-left: 0.5rem;
-  transition: width 0.3s ease, opacity 0.3s ease;
-  width: 0;
-  max-width: 200px;
-  opacity: 0;
-  cursor: pointer;
   font-size: 1rem;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
-  color:  #e0f7fa;
+  color: #e0f7fa;
   background-color: transparent;
 }
 
@@ -194,296 +219,208 @@
 }
 
 .search-bar:focus {
+  border-color: #03b2ca;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1099px) or (max-width: 768px) {
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 1001; /* Ensure it stays above other elements */
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #0d0b21;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    position: fixed;
+    left: 0;
+    max-width: 1200px;
+    padding: 0; 
+    top: 0px;
+    width: 100%;
+    z-index: 1000;
+    transition: all 0.3s ease;
+  }
+
+  .mobile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #0d0b21; /* Matching background */
+    position: absolute;
+    top: 10px;  /* Adjust according to navbar height */
+    left: 0;
+    right: 0;
+    padding: 20px;
+    z-index: 100;  /* Ensures it stays on top */
+  }
+
+  .navbar-left {
+    display: flex;
+    padding: 0;
+    margin-left: -79px;
+    right: 0;
+    margin-right: 0;
+    left: 0;
+    align-items: center;
+  }
+  
+  .logo {
+    align-items: flex-start;
+    left: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left:0 ;
+    padding: 0;
+    height: 40px;
+  }
+
+  .brand-name {
+    font-size: 1.2rem;
+    color: #03b2ca;
+    font-weight: bold;
+  }
+
+  .navbar-center {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 70px; /* Adjust to align below the navbar */
+    right: 0;
+    background-color: #0d0b21;
+    width: 100%; /* Full width for better mobile design */
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .navbar-center.open {
+    display: flex; /* Show when hamburger menu is opened */
+    margin-right: 0;
+    right: 0;
+    left: 0;
+    margin-left: 0;
+  }
+
+  .navbar-center ul {
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  /* Include navbar-right in navbar-center for mobile */
+  .navbar-center .navbar-right {
+    margin-top: 1rem; /* Add some spacing between main links and right links */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-right ul {
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  .navbar-right ul li {
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .desktop-menu, .desktop-actions {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: flex;
+  }
+
+  /* Remove default anchor styles */
+.nav-links a, .actions a ,.logo a, .brand-name a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Make link color white (or the same as text color) */
+  }
+
+/* Add hover styles to retain some interactivity */
+.nav-links a:hover, .actions a:hover, .logo a:hover,.brand-name a {
+  color: #03b2ca; /* Color change on hover */
+  
+  }
+
+/* Optional: You can remove the underline even on hover */
+.nav-links a:hover, .actions a:hover ,  .logo a:hover,.brand-name a{
+  text-decoration: none; 
+  color: #03b2ca;/* Ensures no underline on hover */
+  }
+
+
+/* Search bar styles */
+.navbar__search-container {
+  display: none;
+  position: absolute;
+  top: 3.5rem; /* Adjust the position relative to "Sign In" and "Subscribe" */
+  right: 1rem;
+  background-color: #0d0b21;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.navbar__search-container.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+}
+
+/* Search Button or Icon */
+.search-icon {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #03b2ca;
+}
+
+  .search-bar {
+    width: 100%; /* Full width inside container */
+    opacity: 1;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    color: #e0f7fa;
+    background-color: transparent;
+  }
+
+.search-bar.open {
   width: 200px;
   opacity: 1;
   border-color: #000;
-}
-
-
-/* Dropdown content initially hidden */
-.dropdown-content {
-  display: none;
-  margin-top: 0;
-  background-color: #fff;
-  border-radius: 0.3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  position: absolute;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  left: 0;
-  top: 50%;
-  animation: glowEffect 0.5s ease-in-out forwards;
-}
-
-/* Show dropdown content when dropdown is open */
-.dropdown.open .dropdown-content {
-  display: block;
-}
-
-/* Dropdown item styles */
-.dropdown-item {
-  position: relative;
-  list-style: none;
-}
-
-/* Nested dropdown styles */
-.dropdown-item .nested-dropdown {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: 1rem;
-  background-color: #fff;
-  padding: 0 0;
-  border-radius: 0.3rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 1;
-  animation: glowEffect 0.5s ease-in-out forwards;
-}
-
-/* Show nested dropdown when hovered over */
-.dropdown-item:hover .nested-dropdown,
-.nested-dropdown:hover {
-  display: block;
-}
-
-/* Nested dropdown item styles */
-.nested-dropdown-item {
-  padding: 0 0;
-}
-
-/* Dropdown menu container (hidden by default) */
-.dropdown-menu { 
-  display: none;
-  position: absolute; 
-  top: 100%; 
-  left: -7rem; 
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr,1fr));
-  gap: 0; 
-  height: 270px;
-  padding: 1rem; 
-  background-color: #fff; 
-  border: 1px solid #ddd; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-  border-radius: 0.3rem;
-  z-index: 1;
-  animation: glowEffect 0.5s ease-in-out forwards;  
-}
-
-/* Show dropdown menu when dropdown is open */
-.dropdown.open .dropdown-menu {
-  display: grid;
-}
-
-/* Dropdown column styles */
-.dropdown-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 45rem;
-  margin-bottom: 1rem; 
-}
-
-/* Dropdown column heading */
-.dropdown-column h5 {
-  margin: 0;
-  font-size: 1.1rem;
-  font-weight: bold;
-  border-bottom: 2px solid #f5f5f7;
-  padding-bottom: 0.3rem;
-  color: #007bff;
-}
-
-/* Dropdown items list */
-.dropdown-column ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0; 
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  text-align: left;
-}
-
-/* Dropdown list item */
-.dropdown-column li {
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: black;
-  font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  text-align: left;
-}
-
-/* Dropdown link styles */
-.dropdown-column a {
-  text-decoration: none;
-  color: grey; 
-  font-size: 0.9rem;
-  line-height: 1.5;
-  font-weight: bold;
-  transition: color 0.3s ease;
-  font-family: 'Poppins', sans-serif;
-  text-align: left;
-}
-
-/* Dropdown link hover effect */
-.dropdown-column a:hover {
-  text-decoration: underline;
-  color: #007bff;
-}
-
-
-.link {
-  background: none;
-  border: none;
-  text-decoration: none;
-  color: #e0f7fa;
-  font-family: inherit;
-  font-size: inherit;
-  align-items: center;
-  cursor: pointer;
-  font-weight: 500;
-  padding-bottom: 10px;
-}
-
-
-.link:hover {
-  color: rgb(12, 16, 236);
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: calc(100% + 0.25rem);
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-
-.dropdown.active > .link + .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-.information-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  height: 270px;
-}
-
-.dropdown-column {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  overflow: hidden;
-  height: 270px;
-  width: 20rem;
-  align-content: space-around;
-  align-items: center;
-}
-
-
-.dropdown-links {
-  display: grid;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
-.dropdown-heading {
-  font-weight: 800;
-  margin-bottom: 0.5rem;
-  color: #007bff;
-  font-family: 'Poppins', sans-serif;
-  padding-bottom: 10px;
-}
-
-.login-form > input {
-  margin-bottom: 0.5rem;
-}
-
-.navbar__logo-link{
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #e0f7fa;
-  font-size: 1.5rem;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    padding: 0.5rem;
-    height: 70px; /* Adjust height for small devices */
   }
 
-  .navbar__logo h1 {
-    font-size: 1.5rem; /* Adjust logo size */
+  .search-bar:focus {
+    border-color: #03b2ca;
   }
 
-  .navbar__nav ul {
-    flex-direction: column; /* Stack items vertically */
-    gap: 0.5rem; /* Reduce gap */
-  }
-
-  .search-icon {
-    font-size: 1rem; /* Adjust search icon size */
-  }
-
-  .search-bar {
-    width: 80px; /* Adjust search bar width */
-  }
 }
 
-.navbar__logo-img {
-  width: 50px;
-  height: auto;
-  cursor: pointer;
-}
 
-.navbar__logo-link {
-  text-decoration: none;
-  color: #fff;
-}
-
-button { 
-  background-color: #100e23;             
-  padding: 12px 20px;  
-  color: white;      
-  border: none;              
-  border-radius: 8px;        
-  font-size: 16px;           
-  cursor: pointer;           
-  transition: all 0.3s ease; 
-}
-
-/* Hover effect */
-button:hover {
-  transform: scale(1.05);     
-}
-
-@media (max-width: 768px) {
-  .navbar__nav ul {
-      flex-direction: column;
-      gap: 1rem;
-  }
-  .navbar__actions-row {
-      flex-direction: column;
-      gap: 0.5rem;
-  }
-}
-
-[aria-expanded="true"] .dropdown-content {
-  display: block;
-}
