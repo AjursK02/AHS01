@@ -88,7 +88,7 @@
 /* Responsive Styles */
 
 /* For small devices (phones) */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .demo-project-container {
     padding: 40px 20px;
     margin: 30px auto;
@@ -112,7 +112,7 @@
 }
 
 /* For medium devices (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 401px) and (max-width: 750px) {
   .demo-project-container {
     padding: 50px 25px;
     margin: 40px auto;
@@ -134,7 +134,7 @@
 }
 
 /* For larger screens (laptops, desktops) */
-@media (min-width: 769px) and (max-width: 1440px) {
+@media (min-width: 751px) and (max-width: 1440px) {
   .demo-project-container {
     padding: 60px 40px;
     margin: 50px auto;

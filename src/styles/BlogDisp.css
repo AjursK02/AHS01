@@ -7,7 +7,6 @@
 
 .blogs {
   flex: 1;
-  margin-top: 80px;
   padding: 5px;
   /* background-image: url('../assets/back3.jpg');
   background-size: cover;
@@ -27,7 +26,6 @@
 }
 
 .blog-item {
-  margin-top: 10px;
   padding: 20px;
   background: rgba(42, 42, 42, 0.9);
   border-radius: 8px;
@@ -72,10 +70,14 @@
   }
 
   .blogs {
+    margin-top: 80px;
     flex: 3;
     height: auto;
   }
 
+  .blog-item{
+    margin-top: 10px;
+  }
   .canvas-container {
     flex: 1;
     height: auto;
@@ -110,6 +112,7 @@
   }
 
   .blogs {
+    margin-top: 10px;
     flex: 4;
     padding: 20px;
   }

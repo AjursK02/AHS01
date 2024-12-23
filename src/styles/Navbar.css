@@ -35,6 +35,7 @@
 }
 
 .brand-name {
+  width: 100%;
   font-size: 1.5rem;
   color: #03b2ca;
   font-weight: bold;
@@ -55,8 +56,8 @@
   position: center;
   top: 70px;
   right: 40px;
-  margin-left: 10px;
-  margin-right: 40px;
+  margin-left: 5px;
+  margin-right: 20px;
   justify-content: space-evenly;
   gap: 16rem;
   left: 0;
@@ -84,7 +85,7 @@
 /* Right Section */
 .navbar-right {
   display: flex;
-  margin-left: 20px;
+  margin-left: 5px;
   margin-right: 20px;
 }
 
@@ -118,10 +119,15 @@
   align-items: center;
 }
 
-.desktop-menu ul, .desktop-actions ul {
-  list-style: none;
+.desktop-menu ul{
+  display: flex;
+  gap: 60px;
+}
+
+.desktop-actions ul {
   display: flex;
   gap: 20px;
+  width: max-content;
 }
 
 .hamburger-menu {
@@ -263,7 +269,7 @@
     gap: 20px;
     background-color: #0d0b21; /* Matching background */
     position: absolute;
-    top: 10px;  /* Adjust according to navbar height */
+    top: 26px;  /* Adjust according to navbar height */
     left: 0;
     right: 0;
     padding: 20px;

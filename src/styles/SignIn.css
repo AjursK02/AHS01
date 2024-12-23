@@ -34,7 +34,7 @@ body.modal-open {
 .modal-content {
   padding: 20px;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   position: relative;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -137,7 +137,7 @@ button:hover {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries for All Devices */
 
 /* Small mobile devices */
 @media (max-width: 320px) {
@@ -206,7 +206,7 @@ button:hover {
 @media (min-width: 1025px) {
   .modal-content {
     width: 50%;
-    max-width: 500px;
+    max-width: 600px;
     padding: 25px;
   }
 
@@ -228,7 +228,7 @@ button:hover {
 @media (min-width: 1600px) {
   .modal-content {
     width: 40%;
-    max-width: 600px;
+    max-width: 700px;
   }
 
   .modal-content h2 {

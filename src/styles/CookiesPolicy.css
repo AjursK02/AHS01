@@ -56,7 +56,7 @@
 /* Responsive Styles */
 
 /* For small devices (phones) */
-@media (max-width: 480px) {
+@media (max-width: 400px) {
   .cookies-policy {
     padding: 1rem;
     font-size: 0.9rem;
@@ -74,7 +74,7 @@
 }
 
 /* For medium devices (tablets) */
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 401px) and (max-width: 750px) {
   .cookies-policy {
     flex-direction: row;
     justify-content: space-evenly;
