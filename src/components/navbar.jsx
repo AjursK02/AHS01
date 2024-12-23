@@ -88,8 +88,9 @@ const Navbar = () => {
 
         <div className="desktop-actions">
           <ul className="actions">
-            <li href="#" onClick={toggleSignIn}>Sign In |</li>
-            <li href="#subscribe">Subscribe |</li>
+            <li href="#" onClick={toggleSignIn}>Sign In</li>
+            <li>|</li>
+            <li href="#subscribe">Subscribe</li>
             <a href="#search">
               <li className="search-icon" onClick={toggleSearch}>
                 <i className="fas fa-search"></i>
@@ -117,10 +118,10 @@ const Navbar = () => {
             <Link to="/AboutPage" onClick={closeDropdown}>
               <li>About</li>
             </Link>
-            <li href="#" onClick={toggleSignIn}>Sign In |</li>
-            <li href="#subscribe">Subscribe |</li>
+            <li href="#" onClick={toggleSignIn}>Sign In</li>
+            <li href="#subscribe">Subscribe</li>
             <a href="#search">
-              <li className="search-icon && navbar__search-container" onClick={toggleSearch}>
+              <li className="search-icon" onClick={toggleSearch}>
                 <i className="fas fa-search"></i>
               </li>
             </a>
