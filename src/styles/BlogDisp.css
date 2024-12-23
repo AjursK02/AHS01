@@ -62,7 +62,7 @@
 }
 
 /* Responsive Styles */
-@media (min-width: 480px) {
+@media (min-width: 350px) {
   .container {
     flex-direction: row;
     justify-content: space-between;
@@ -76,7 +76,7 @@
   }
 
   .blog-item{
-    margin-top: 10px;
+    margin-top: 80px;
   }
   .canvas-container {
     flex: 1;
